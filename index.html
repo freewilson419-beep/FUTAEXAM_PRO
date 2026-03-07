@@ -1089,7 +1089,7 @@
             { date: '2026-03-24', day: 'Tuesday', course: 'MEE 101', isCBE: false, time: 'morning', timeRange: '8:30-11:30 AM', venue: 'New SAAT Lecture Theatre', invigilators: 'Prof. Adegbenro and Mrs. Adeniran', level: 100 },
             { date: '2026-03-24', day: 'Tuesday', course: 'APH 505', isCBE: false, time: 'evening', timeRange: '3:30-6:30 PM', venue: 'New SAAT Lecture Theatre', invigilators: 'Profs. Alokan, Aro, and Dr. Ayeni', level: 500 },
             { date: '2026-03-24', day: 'Tuesday', course: 'APH 309', isCBE: false, time: 'afternoon', timeRange: '12:00-3:00 PM', venue: 'New SAAT Lecture Theatre', invigilators: 'Prof. Faluyi & Dr Durojaiye', level: 300 },
-             { date: '2026-03-27', day: 'Tuesday', course: 'CSC 101', isCBE: true, time: 'morning', timeRange: '8:00-11:00 AM', venue: 'CBE Center', invigilators: 'Not Disclosed', level: 100 },            
+             { date: '2026-03-27', day: 'Friday', course: 'CSC 101', isCBE: true, time: 'morning', timeRange: '8:00-11:00 AM', venue: 'CBE Center', invigilators: 'Not Disclosed', level: 100 },            
             { date: '2026-03-25', day: 'Wednesday', course: 'APH 405', isCBE: false, time: 'morning', timeRange: '8:30-11:30 AM', venue: 'New SAAT Lecture Theatre', invigilators: 'Profs. Adebayo, Faluyi', level: 400 },
             { date: '2026-03-25', day: 'Wednesday', course: 'FWT 409', isCBE: false, time: 'afternoon', timeRange: '12:00-3:00 PM', venue: 'New SAAT Lecture Theatre', invigilators: 'Drs Ayeni, Durojaiye, and Mrs. Adeniran', level: 400 },
             { date: '2026-03-25', day: 'Wednesday', course: 'APH 407', isCBE: false, time: 'evening', timeRange: '3:30-6:30 PM', venue: 'New SAAT Lecture Theatre', invigilators: 'Prof. Fajemisin, Dr. Ayeni, Dr. Omotoso', level: 400 },
@@ -1098,9 +1098,9 @@
             { date: '2026-03-26', day: 'Thursday', course: 'APH 305', isCBE: false, time: 'morning', timeRange: '8:30-11:30 AM', venue: 'New SAAT Lecture Theatre', invigilators: 'Prof. Agbede, Dr Ayeni & Dr Omotoso', level: 300 },
             { date: '2026-03-26', day: 'Thursday', course: 'APH 413', isCBE: false, time: 'afternoon', timeRange: '12:00-3:00 PM', venue: 'New SAAT Lecture Theatre', invigilators: 'Profs. Adu and Adegbenro', level: 400 },
             
-            { date: '2026-03-28', day: 'Friday', course: 'CHE 101', isCBE: true, time: 'morning', timeRange: '8:00-9:30 AM', venue: 'CBE Center', invigilators: 'Dr. Durojaiye & Mrs. Osho', level: 100 },
+            { date: '2026-03-28', day: 'Saturday', course: 'CHE 101', isCBE: true, time: 'morning', timeRange: '8:00-9:30 AM', venue: 'CBE Center', invigilators: 'Dr. Durojaiye & Mrs. Osho', level: 100 },
             
-            { date: '2026-03-28', day: 'Saturday', course: 'PHY 103', isCBE: true, time: 'morning', timeRange: '8:00-9:00 AM', venue: 'CBE Center', invigilators: 'Prof. Adegbenro & Mrs. Osho', level: 100 },
+            { date: '2026-03-27', day: 'Saturday', course: 'PHY 103', isCBE: true, time: 'afternoon', timeRange: '3:30-6:30 PM', venue: 'CBE Center', invigilators: 'Prof. Adegbenro & Mrs. Osho', level: 100 },
             { date: '2026-03-28', day: 'Saturday', course: 'APH 411', isCBE: false, time: 'afternoon', timeRange: '12:00-3:00 PM', venue: 'New SAAT Lecture Theatre', invigilators: 'Prof. Adegbenro and Dr. Ayeni', level: 400 },
             { date: '2026-03-28', day: 'Saturday', course: 'APH 305 P', isCBE: false, time: 'morning', timeRange: '8:30-11:30 AM', venue: 'Practical Lab', invigilators: 'Prof. Agbede, Dr. Ayeni & All Technologists', level: 300, isPractical: true },
             { date: '2026-03-28', day: 'Saturday', course: 'MET 213', isCBE: true, time: 'afternoon', timeRange: '12:00-3:00 PM', venue: 'CBE Center', invigilators: 'Prof. Aro & Dr. Durojaiye', level: 200 },
@@ -1336,8 +1336,7 @@
                 document.getElementById('course-select').value = '';
             }
         }
-
-        // Conflict Detection
+   // Conflict Detection
         function checkConflicts() {
             const myExams = examData.filter(e => myCourses.includes(e.course));
             const conflicts = [];
@@ -1362,7 +1361,6 @@
                 alertBox.classList.add('hidden');
             }
         }
-
         // CBE List
         function renderCBEList() {
             const container = document.getElementById('cbe-container');
